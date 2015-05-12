@@ -16,14 +16,14 @@
 //       Versão  Data         Autores      Descrição
 //       1.0     25/set/2014  gro		   Em desenvolvimento
 // -------------------------------------------------------------------------
-// 
+//
 //	ESPECIFICAÇÕES
 // 
-//	Descrição do módulo:
+//	Descrição do módulo: test
 //		Módulo que controla o início e fim do sistema, e age como intermediário entre agentes 
 //		externos e a tripulação. É, portanto, responsável por inicializar todos os outros módulos 
 //		e, mais tarde, por desligá-los, e também por desligar o sistema. Adicionalmente, qualquer 
-//		contato entre a central e o sistema embarcado deve obrigatoriamente passar pelo módulo 
+//		contato entre a central e o sistema embarcado deve   obrigatoriamente passar pelo módulo 
 //		Capitão, que então delega a mensagem para o módulo responsável. Ele é quem manda e quem dá 
 //		as ordens.
 // 
