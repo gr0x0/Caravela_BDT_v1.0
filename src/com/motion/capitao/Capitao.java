@@ -65,7 +65,7 @@ public class Capitao {
 	Bombardeiro 	pBombardeiro = null;
 	
 //----------CONSTRUTOR----------//
-	private Capitao(){		
+	private Capitao(){		    
 	}
 	
 	private void startSystem(){
