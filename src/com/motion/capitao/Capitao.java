@@ -61,12 +61,12 @@ public class Capitao {
 	Cartografo 		pCartografo	 = null;
 	//Comissario 	pComissario	 = null;
 	//Escrivao 		pEscrivao	 = null;
-	Navegador 		pNavegador	 = null;
+	Navegador 		pNavegador	 = null;            
 	Bombardeiro 	pBombardeiro = null;
 	
 //----------CONSTRUTOR----------//
 	private Capitao(){		    
-	}
+	} 
 	
 	private void startSystem(){
 		

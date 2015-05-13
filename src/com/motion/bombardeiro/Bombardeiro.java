@@ -52,7 +52,7 @@ import com.motion.navegador.Navegador;
 import com.motion.supportClasses.InterfaceManager;
 import com.motion.supportClasses.ObservadoIF;
 import com.motion.supportClasses.ObservadorIF;
-
+       ///
 public class Bombardeiro implements ObservadorIF {
    
 	//----------VARIÁVEIS----------//
