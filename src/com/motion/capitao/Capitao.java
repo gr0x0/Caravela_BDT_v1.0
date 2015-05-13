@@ -89,7 +89,7 @@ public class Capitao {
 		//pComissario.checkVersion();
 		
 	}
-
+    /// testa ver se esta comitando 
 	public static void main(String [ ] args)
 	{
 	      Capitao capitao = new Capitao();
