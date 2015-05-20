@@ -52,7 +52,7 @@ package com.motion.capitao;
 import com.motion.bombardeiro.*;
 import com.motion.cartografo.*;
 //import com.motion.comissario.*;
-//import com.motion.escrivao.*;
+//import com.motion.escrivao.    *;
 import com.motion.navegador.*;
 
 public class Capitao {
