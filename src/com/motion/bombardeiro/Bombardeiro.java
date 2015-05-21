@@ -52,7 +52,7 @@ import com.motion.navegador.Navegador;
 import com.motion.supportClasses.InterfaceManager;
 import com.motion.supportClasses.ObservadoIF;
 import com.motion.supportClasses.ObservadorIF;
-       ///
+
 public class Bombardeiro implements ObservadorIF {
    
 	//----------VARIÁVEIS----------//
@@ -64,8 +64,8 @@ public class Bombardeiro implements ObservadorIF {
 	private Bombardeiro() 
 	{		
 		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protótipo
-		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
-				Cartografo.getCartografo().getMaresCoordMatrix());
+		pInterfaceManager = InterfaceManager.getInterfaceManager(
+				Cartografo.getCartografo().getMaresCoordinates());
 		
 		// aqui entra a rotina de inicialização da tela e da reprodução contínua das impressões
 		// ...
@@ -105,6 +105,7 @@ public class Bombardeiro implements ObservadorIF {
 			int[] minLimits = Cartografo.getCartografo().getMaresMinimumLimits();
 			
 			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
+			pInterfaceManager.notifyRepaint();
 		}		
 	}
 	

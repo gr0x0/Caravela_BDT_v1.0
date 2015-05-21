@@ -16,14 +16,14 @@
 //       Versão  Data         Autores      Descrição
 //       1.0     25/set/2014  gro		   Em desenvolvimento
 // -------------------------------------------------------------------------
-//
+// 
 //	ESPECIFICAÇÕES
 // 
-//	Descrição do módulo: test
+//	Descrição do módulo:
 //		Módulo que controla o início e fim do sistema, e age como intermediário entre agentes 
 //		externos e a tripulação. É, portanto, responsável por inicializar todos os outros módulos 
 //		e, mais tarde, por desligá-los, e também por desligar o sistema. Adicionalmente, qualquer 
-//		contato entre a central e o sistema embarcado deve   obrigatoriamente passar pelo módulo 
+//		contato entre a central e o sistema embarcado deve obrigatoriamente passar pelo módulo 
 //		Capitão, que então delega a mensagem para o módulo responsável. Ele é quem manda e quem dá 
 //		as ordens.
 // 
@@ -52,7 +52,7 @@ package com.motion.capitao;
 import com.motion.bombardeiro.*;
 import com.motion.cartografo.*;
 //import com.motion.comissario.*;
-//import com.motion.escrivao.    *;
+//import com.motion.escrivao.*;
 import com.motion.navegador.*;
 
 public class Capitao {
@@ -61,12 +61,12 @@ public class Capitao {
 	Cartografo 		pCartografo	 = null;
 	//Comissario 	pComissario	 = null;
 	//Escrivao 		pEscrivao	 = null;
-	Navegador 		pNavegador	 = null;            
+	Navegador 		pNavegador	 = null;
 	Bombardeiro 	pBombardeiro = null;
 	
 //----------CONSTRUTOR----------//
-	private Capitao(){		    
-	} 
+	private Capitao(){		
+	}
 	
 	private void startSystem(){
 		
@@ -89,7 +89,7 @@ public class Capitao {
 		//pComissario.checkVersion();
 		
 	}
-    /// testa ver se esta comitando 
+
 	public static void main(String [ ] args)
 	{
 	      Capitao capitao = new Capitao();

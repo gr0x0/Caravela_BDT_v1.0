@@ -64,10 +64,10 @@ package com.motion.cartografo;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.ListIterator;
 import com.motion.navegador.Navegador;
 import com.motion.supportClasses.ArchiveManager;
-import com.motion.supportClasses.Matrix;
 import com.motion.supportClasses.ObservadorIF;
 import com.motion.supportClasses.ObservadoIF;
 
@@ -80,7 +80,6 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 	private ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();
 
 	private double 	latMinima = 1000, lonMinima = 1000, latMaxima = -1000, lonMaxima = -1000;
-	private int 	matrixRows = 10, matrixColumns = 15;
 
 	//----------CONSTRUTOR----------//
 	private Cartografo(){
@@ -152,49 +151,20 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 		}		
 	}
 
-	public Matrix getMaresCoordMatrix() 
-	{		
-		int[][] matrix = new int[matrixColumns][matrixRows];
-		ArrayList<String> zonaTypes = new ArrayList<String>();
-
-		double unidadeLat = (this.latMaxima - this.latMinima)/this.matrixColumns;
-		double unidadeLon = (this.lonMaxima - this.lonMinima)/this.matrixRows;
-
-		for(int i=0; i<matrixColumns; i++)
+	public int[][] getMaresCoordinates() 
+	{	
+		int[][] mares = new int[Cartografo.listaMares.size()][4];
+		Mar marAux;
+		Iterator<Mar> iterator = Cartografo.listaMares.iterator();
+		for(int i = 0; iterator.hasNext(); i++)
 		{
-			for(int j=0; j<matrixRows; j++)
-			{
-				try
-				{
-//					int idx = zonaTypes.indexOf(listaMares.findMar((this.latMinima + i*unidadeLat),
-//							(this.lonMinima + j*unidadeLon)).getId());
-					int idx = zonaTypes.indexOf(listaMares.findMar(-22.84,-43.37).getId());
-					
-					if(idx == -1)
-						//Se não tiver passado por essa zona ainda...
-					{
-						Mar mar = listaMares.findMar((this.latMinima + i*unidadeLat),
-								(this.lonMinima + j*unidadeLon));
-						zonaTypes.add(mar.getId());
-						matrix[i][j] = Integer.getInteger(zonaTypes.get(zonaTypes.size()-1));
-						/*TEST PRINT*/System.out.print("      Valor da zoneId em int = "+matrix[i][j]+"\n");
-					}
-					else
-						//Se já tiver passado, ou seja, ela está na lista zonaTypes...
-					{
-						matrix[i][j] = Integer.getInteger(zonaTypes.get(idx));
-						/*TEST PRINT*/System.out.print("      Valor da zoneId em int = "+matrix[i][j]+"\n");
-					}						
-				}
-				catch(NullPointerException e)
-				{
-					matrix[i][j] = 0;
-					/*TEST PRINT*/System.out.print("      Valor da zoneId em int = "+matrix[i][j]+"\n");
-				}
-			}
+			marAux = iterator.next();
+			mares[i][0] = (int)marAux.getLonFim();
+			mares[i][1] = (int)marAux.getLatFim();
+			mares[i][2] = (int)marAux.getLonIni();
+			mares[i][3] = (int)marAux.getLatIni();
 		}
-
-		return new Matrix(matrix);
+		return mares;
 	}
 
 	public int[] getMaresMinimumLimits()

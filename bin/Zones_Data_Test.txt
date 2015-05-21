@@ -2,7 +2,7 @@
 Zona01, -22.931859, -22.846682, -43.496107, -43.393895, Coca; Pepsi; Skoll; SevenUp
 Zona02, -23.000000, -22.931859, -43.496107, -43.393895, Flamengo; Fluminense; Botafogo; Vasco
 Zona03, -23.914823, -22.863717, -43.393895, -43.257612, CasaDaEmpada; Xerox; Morning; LABGRAD; Carga_Nobre; Pilotis; Bosque; Leme; Fastway
-Zona04, -23.948894, -22.829647, -43.257612, -43.155400, MorningStar; spotify; excel; Groxo_gay; emicida; NxZero; McBill; Magalhaez 
+Zona04, -23.948894, -22.829647, -43.257612, -43.155400, XXX
 Zona05, -23.000000, -22.948894, -43.359824, -43.223541, XXX
 Zona06, -22.948894, -23.914823, -43.393895, -43.257612, XXX
 Zona07, -23.000000, -22.948894, -43.393895, -43.359824, XXX
