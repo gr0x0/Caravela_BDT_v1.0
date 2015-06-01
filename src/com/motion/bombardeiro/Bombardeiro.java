@@ -29,7 +29,7 @@
 //		???
 // 
 //	Estrutura dos dados:
-//		???
+//		???  
 //    
 ////////////////////////////////////////////////////////////////////////////
 // 
@@ -52,7 +52,7 @@ import com.motion.navegador.Navegador;
 ///*INTERFACE CODE*/import com.motion.supportClasses.InterfaceManager;
 import com.motion.supportClasses.ObservadoIF;
 import com.motion.supportClasses.ObservadorIF;
-
+       ///
 public class Bombardeiro implements ObservadorIF {
    
 	//----------VARIÁVEIS----------//
@@ -64,6 +64,13 @@ public class Bombardeiro implements ObservadorIF {
 	private Bombardeiro() 
 	{		
 		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protótipo
+<<<<<<< Updated upstream
+=======
+
+		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
+				Cartografo.getCartografo().getMaresCoordMatrix());
+
+>>>>>>> Stashed changes
 //		/*INTERFACE CODE*/pInterfaceManager = InterfaceManager.getInterfaceManager(
 //				Cartografo.getCartografo().getMaresCoordinates());
 		
@@ -110,10 +117,17 @@ public class Bombardeiro implements ObservadorIF {
 			
 //			int[] minLimits = Cartografo.getCartografo().getMaresMinimumLimits();
 			
+
+
+			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
+		}		
+
+>>>>>>> Stashed changes
 //			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
 //			pInterfaceManager.notifyRepaint();
 //		}
 /*INTERFACE CODE END*/
+
 	}
 	
 }
