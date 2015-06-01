@@ -64,7 +64,7 @@ package com.motion.cartografo;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
+///*INTERFACE CODE*/import java.util.Iterator;
 import java.util.ListIterator;
 import com.motion.navegador.Navegador;
 import com.motion.supportClasses.ArchiveManager;
@@ -74,10 +74,10 @@ import com.motion.supportClasses.ObservadoIF;
 public class Cartografo implements ObservadorIF, ObservadoIF {
 
 	//----------VARIÁVEIS----------//
-	static private Cartografo pCartografo = null;
-	static protected MarList listaMares = new MarList();
-	static private Mar marAtual = null;	
-	private ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();
+	private 	static Cartografo pCartografo = null;
+	protected 	static MarList listaMares = new MarList();
+	private 	static Mar marAtual = null;	
+	private 	ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();
 
 	private double 	latMinima = 1000, lonMinima = 1000, latMaxima = -1000, lonMaxima = -1000;
 
@@ -140,7 +140,7 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 	}
 
 	//----------MÉTODOS PÚBLICOS----------//
-	static public Cartografo getCartografo() {
+	public static Cartografo getCartografo() {
 		if (pCartografo == null){
 			pCartografo = new Cartografo();
 			return pCartografo;
@@ -151,21 +151,23 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 		}		
 	}
 
-	public int[][] getMaresCoordinates() 
-	{	
-		int[][] mares = new int[Cartografo.listaMares.size()][4];
-		Mar marAux;
-		Iterator<Mar> iterator = Cartografo.listaMares.iterator();
-		for(int i = 0; iterator.hasNext(); i++)
-		{
-			marAux = iterator.next();
-			mares[i][0] = (int)marAux.getLonFim();
-			mares[i][1] = (int)marAux.getLatFim();
-			mares[i][2] = (int)marAux.getLonIni();
-			mares[i][3] = (int)marAux.getLatIni();
-		}
-		return mares;
-	}
+/*INTERFACE CODE BEGIN*/
+//	public int[][] getMaresCoordinates() 
+//	{	
+//		int[][] mares = new int[Cartografo.listaMares.size()][4];
+//		Mar marAux;
+//		Iterator<Mar> iterator = Cartografo.listaMares.iterator();
+//		for(int i = 0; iterator.hasNext(); i++)
+//		{
+//			marAux = iterator.next();
+//			mares[i][0] = (int)marAux.getLonFim();
+//			mares[i][1] = (int)marAux.getLatFim();
+//			mares[i][2] = (int)marAux.getLonIni();
+//			mares[i][3] = (int)marAux.getLatIni();
+//		}
+//		return mares;
+//	}
+/*INTERFACE CODE END*/
 
 	public int[] getMaresMinimumLimits()
 	{

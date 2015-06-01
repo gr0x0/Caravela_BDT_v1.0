@@ -49,23 +49,23 @@ package com.motion.bombardeiro;
 
 import com.motion.cartografo.Cartografo;
 import com.motion.navegador.Navegador;
-import com.motion.supportClasses.InterfaceManager;
+///*INTERFACE CODE*/import com.motion.supportClasses.InterfaceManager;
 import com.motion.supportClasses.ObservadoIF;
 import com.motion.supportClasses.ObservadorIF;
 
 public class Bombardeiro implements ObservadorIF {
    
 	//----------VARIÁVEIS----------//
-	static private Bombardeiro pBombardeiro = null;	 
-	private InterfaceManager pInterfaceManager 	= null;
-	private String marAtual = null;
+	private static 	Bombardeiro pBombardeiro 	= null;
+	private 		String 		marAtual 		= null;
+//	/*INTERFACE CODE*/private InterfaceManager pInterfaceManager 	= null;
 	
 //----------CONSTRUTOR----------//
 	private Bombardeiro() 
 	{		
 		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protótipo
-		pInterfaceManager = InterfaceManager.getInterfaceManager(
-				Cartografo.getCartografo().getMaresCoordinates());
+//		/*INTERFACE CODE*/pInterfaceManager = InterfaceManager.getInterfaceManager(
+//				Cartografo.getCartografo().getMaresCoordinates());
 		
 		// aqui entra a rotina de inicialização da tela e da reprodução contínua das impressões
 		// ...
@@ -76,7 +76,7 @@ public class Bombardeiro implements ObservadorIF {
 	}
 	
 //----------MÉTODOS PÚBLICOS----------//
-	static public Bombardeiro getBombardeiro() 
+	public static Bombardeiro getBombardeiro() 
 	{
 		if (pBombardeiro == null){
 			pBombardeiro = new Bombardeiro();
@@ -88,6 +88,11 @@ public class Bombardeiro implements ObservadorIF {
 		}
 		
 	}
+	
+	public String getMarAtual()
+	{
+		return this.marAtual;
+	}
 
 	@Override
 	public void notifyObservador(ObservadoIF o) 
@@ -96,17 +101,19 @@ public class Bombardeiro implements ObservadorIF {
 		{
 			this.marAtual = (String)o.get();
 		}
-		else if (o.getClass().equals(Navegador.class))
-		{
-			double[] coordinates = (double[])o.get();
-			int x = (int)(coordinates[0]*100);
-			int y = (int)(coordinates[1]*100);
+/*INTERFACE CODE BEGIN*/
+//		else if (o.getClass().equals(Navegador.class))
+//		{
+//			double[] coordinates = (double[])o.get();
+//			int x = (int)(coordinates[0]*100);
+//			int y = (int)(coordinates[1]*100);
 			
-			int[] minLimits = Cartografo.getCartografo().getMaresMinimumLimits();
+//			int[] minLimits = Cartografo.getCartografo().getMaresMinimumLimits();
 			
-			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
-			pInterfaceManager.notifyRepaint();
-		}		
+//			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
+//			pInterfaceManager.notifyRepaint();
+//		}
+/*INTERFACE CODE END*/
 	}
 	
 }

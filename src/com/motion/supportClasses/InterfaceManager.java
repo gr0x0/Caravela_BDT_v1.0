@@ -7,15 +7,15 @@ import javax.swing.*;
 
 public class InterfaceManager
 {
-	static private	InterfaceManager 	pInterfaceManager 	= null;
-	static private	MapFrame			mapFrame 			= null;
+	private static	InterfaceManager 	pInterfaceManager 	= null;
+	private static	MapFrame			mapFrame 			= null;
 
-	static protected int StringsSpacingX;
-	static protected int StringsSpacingY;
-	static protected int LowestX = 0, LowestY = 0, HighestX = 0, HighestY = 0;
+	protected static int StringsSpacingX;
+	protected static int StringsSpacingY;
+	protected static int LowestX = 0, LowestY = 0, HighestX = 0, HighestY = 0;
 
-	static protected int[][]	zonesLimitsCoords;	//Vetor Nx4 de pares de coords das zonas
-	static protected int[]		agentCoordAtuais;	//Vetor 2x1 com o par de coords do agente
+	protected static int[][]	zonesLimitsCoords;	//Vetor Nx4 de pares de coords das zonas
+	protected static int[]		agentCoordAtuais;	//Vetor 2x1 com o par de coords do agente
 													//atualizadas a cada instante
 
 	private InterfaceManager(int[][] zonesLimitCoords)

@@ -131,11 +131,11 @@ public class Navegador implements ObservadoIF
 {
 
 //----------VARIÁVEIS----------//
-	static private Navegador pNavegador = null;	
-	static private int refreshTimer = 1;
-	private String latitude;
-	private String longitude;
-	private String velocidade;	
+	private static 	Navegador 	pNavegador = null;	
+	private static 	int 		refreshTimer = 1;
+	private 		String 		latitude;
+	private 		String 		longitude;
+	private 		String 		velocidade;	
 	private ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();   
 	
 //----------CONSTRUTOR----------//
@@ -186,7 +186,7 @@ public class Navegador implements ObservadoIF
 	}
 	
 //----------MÉTODOS PÚBLICOS----------//
-	static public Navegador getNavegador() 
+	public static Navegador getNavegador() 
 	{
 		if (pNavegador == null){
 			pNavegador = new Navegador();
