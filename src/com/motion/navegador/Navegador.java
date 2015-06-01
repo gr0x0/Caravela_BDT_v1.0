@@ -128,7 +128,7 @@ import com.motion.supportClasses.ObservadorIF;
 import com.motion.supportClasses.ObservadoIF;
 
 public class Navegador implements ObservadoIF 
-{
+{ 
 
 //----------VARIÁVEIS----------//
 	private static 	Navegador 	pNavegador = null;	
