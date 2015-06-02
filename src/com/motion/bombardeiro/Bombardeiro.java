@@ -97,7 +97,7 @@ public class Bombardeiro implements ObservadorIF {
 		}
 		
 		else {
-			return pBombardeiro;
+			return pBombardeiro; 
 		}
 		
 	}
