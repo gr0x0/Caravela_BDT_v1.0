@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////////////
 //
-//	INFORMAÇÕES GERAIS
+//	INFORMAï¿½ï¿½ES GERAIS
 //
-//	Módulo: com.motion.bombardeiro
+//	Mï¿½dulo: com.motion.bombardeiro
 //
-//	Nome do arquivo em repositório: Z:\...\...\...\Bombardeiro.java
+//	Nome do arquivo em repositï¿½rio: Z:\...\...\...\Bombardeiro.java
 //
 //	Dono: R0B07F4C70RY
 //	Projeto: Motion
@@ -14,18 +14,18 @@
 //		Marcio Amadeus - ama
 //
 //	Log de trabalho
-//       Versão  Data         Autores      Descrição
+//       Versï¿½o  Data         Autores      Descriï¿½ï¿½o
 //       1.0     06/mar/2015  gro		   Em desenvolvimento
 // -------------------------------------------------------------------------
 // 
-//	ESPECIFICAÇÕES
+//	ESPECIFICAï¿½ï¿½ES
 // 
-//	Descrição do módulo:
-//		Módulo responsável pela comunicação e reprodução das sequências de impressões na tela, 
-//		além do manejamento delas em memória RAM. É o cara que ganha a vida bombardeando as 
-//		outras embarcações com toda a "propaganda de guerra".
+//	Descriï¿½ï¿½o do mï¿½dulo:
+//		Mï¿½dulo responsï¿½vel pela comunicaï¿½ï¿½o e reproduï¿½ï¿½o das sequï¿½ncias de impressï¿½es na tela, 
+//		alï¿½m do manejamento delas em memï¿½ria RAM. ï¿½ o cara que ganha a vida bombardeando as 
+//		outras embarcaï¿½ï¿½es com toda a "propaganda de guerra".
 // 
-//	Propriedades a serem observadas por módulos clientes:
+//	Propriedades a serem observadas por mï¿½dulos clientes:
 //		???
 // 
 //	Estrutura dos dados:
@@ -35,13 +35,13 @@
 // 
 // -------------------------------------------------------------------------
 //
-//	MÉTODOS
+//	Mï¿½TODOS
 // 
 //		Bombardeiro
 //			- Visibilidade: privada.
 //			- Tipo de retorno: nenhum (construtor).
-//			- Parâmetros: nenhum.
-//			- Descrição: ???
+//			- Parï¿½metros: nenhum.
+//			- Descriï¿½ï¿½o: ???
 //
 ////////////////////////////////////////////////////////////////////////////
 
@@ -55,7 +55,7 @@ import com.motion.supportClasses.ObservadorIF;
        ///
 public class Bombardeiro implements ObservadorIF {
    
-	//----------VARIÁVEIS----------//
+	//----------VARIï¿½VEIS----------//
 	private static 	Bombardeiro pBombardeiro 	= null;
 	private 		String 		marAtual 		= null;
 //	/*INTERFACE CODE*/private InterfaceManager pInterfaceManager 	= null;
@@ -63,23 +63,32 @@ public class Bombardeiro implements ObservadorIF {
 //----------CONSTRUTOR----------//
 	private Bombardeiro() 
 	{		
-		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protótipo
+
+		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protï¿½tipo
 
 //		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
 //				Cartografo.getCartografo().getMaresCoordMatrix());
 
+
+		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protï¿½tipo
+
+
+//		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
+//				Cartografo.getCartografo().getMaresCoordMatrix());
+
+
 //		/*INTERFACE CODE*/pInterfaceManager = InterfaceManager.getInterfaceManager(
 //				Cartografo.getCartografo().getMaresCoordinates());
 		
-		// aqui entra a rotina de inicialização da tela e da reprodução contínua das impressões
+		// aqui entra a rotina de inicializaï¿½ï¿½o da tela e da reproduï¿½ï¿½o contï¿½nua das impressï¿½es
 		// ...
 		
-		//Inscrevendo-se como observador junto aos módulos Navegador e Cartógrafo
+		//Inscrevendo-se como observador junto aos mï¿½dulos Navegador e Cartï¿½grafo
 		Navegador.getNavegador().add(this);
 		Cartografo.getCartografo().add(this);
 	}
 	
-//----------MÉTODOS PÚBLICOS----------//
+//----------Mï¿½TODOS Pï¿½BLICOS----------//
 	public static Bombardeiro getBombardeiro() 
 	{
 		if (pBombardeiro == null){
@@ -117,6 +126,12 @@ public class Bombardeiro implements ObservadorIF {
 //			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
 //		}		
 
+
+
+			//pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
+		//}		
+
+
 //			pInterfaceManager.setAgentCoord(x-minLimits[0], y-minLimits[1]);
 //			pInterfaceManager.notifyRepaint();
 //		}
@@ -125,3 +140,5 @@ public class Bombardeiro implements ObservadorIF {
 	}
 	
 }
+	
+
