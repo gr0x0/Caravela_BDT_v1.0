@@ -91,8 +91,7 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 		try
 		{	
 			//Abrindo arquivo texto de Mares
-			ArchiveManager archiveManager = new ArchiveManager(
-			"C:/Users/Daniel/Google Drive/Arquivos de Programação/JAVA no Eclipse/workspace/Caravela_BDT_v1.0/data/Zones_Data_Test.txt");
+			ArchiveManager archiveManager = new ArchiveManager("data\\Zones_Data_Test.txt");
 			ArrayList<String> data = archiveManager.openArchive();
 
 //			/*TEST PRINT*/System.out.print("------Início da leitura de zonas e alocação de Mares------\n");

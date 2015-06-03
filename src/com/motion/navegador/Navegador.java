@@ -150,8 +150,7 @@ public class Navegador implements ObservadoIF
 		try
 		{	
 			//Abrindo arquivo texto de posições de GPS
-			ArchiveManager archiveManager = new ArchiveManager(
-					"C:/Users/Daniel/Google Drive/Arquivos de Programação/JAVA no Eclipse/workspace/Caravela_BDT_v1.0/data/GPS_Data_Test.txt");
+			ArchiveManager archiveManager = new ArchiveManager("data\\GPS_Data_Test.txt");
 			final ArrayList<String> data = archiveManager.openArchive();
 				
 			//Inicializando o iterador temporal
