@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jun 04 15:31:58 BRT 2015 -->
+
+
+<zonas xmlns="http://www.w3schools.com"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.w3schools.com data//schema.xsd">
+           
+           <zona id="GAVEA03">
+           		<lat0>-22.931859</lat0>
+           		<latF>-22.846682</latF>
+           		<lon0>-43.496107</lon0>
+           		<lonF>-43.393895</lonF>
+           		<impressoes>
+           			<impressao>CocaCola_13_02_16</impressao>
+           			<impressao>Pepsi_15_01_16</impressao>
+           			<impressao>Sprite_10_12_15</impressao>
+           			<impressao>FantaLaranja_01_01_16</impressao>
+           		</impressoes>           
+           </zona>
+                 
+</zonas>
