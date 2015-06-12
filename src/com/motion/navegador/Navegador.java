@@ -145,12 +145,12 @@ public class Navegador implements ObservadoIF
 		// Os dados de latitude, longitude e velocidade devem ser armazenados nas variáveis
 		// correspondentes utilizando-se os métodos set privados.
 		// Atualmente e com intenção de teste, tais dados estão sendo pegos de um arquivo texto chamado
-		// "GPS_Data_Test.txt", contido no diretório 'data'.
+		// "GPS_Data_Test.txt", contido no diretório 'resources'.
 		
 		try
 		{	
 			//Abrindo arquivo texto de posições de GPS
-			ArchiveManager archiveManager = new ArchiveManager("data\\GPS_Data_Test.txt");
+			ArchiveManager archiveManager = new ArchiveManager("resources\\GPS_Data_Test.txt");
 			final ArrayList<String> data = archiveManager.openArchive();
 				
 			//Inicializando o iterador temporal

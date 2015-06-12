@@ -86,12 +86,12 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 
 		// Aqui entra a rotina de try catch pra pegar os dados das zonas relativas ao ônibus.
 		// Atualmente e com intenção de teste, tais dados estão sendo pegos de um arquivo texto chamado
-		// "Zones_Data_Test.txt", contido no diretório 'data'.
+		// "Zones_Data_Test.txt", contido no diretório 'resources'.
 
 		try
 		{	
 			//Abrindo arquivo texto de Mares
-			ArchiveManager archiveManager = new ArchiveManager("data\\Zones_Data_Test.txt");
+			ArchiveManager archiveManager = new ArchiveManager("resources\\Zones_Data_Test.txt");
 			ArrayList<String> data = archiveManager.openArchive();
 
 //			/*TEST PRINT*/System.out.print("------Início da leitura de zonas e alocação de Mares------\n");
