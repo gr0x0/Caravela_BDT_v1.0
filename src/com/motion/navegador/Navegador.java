@@ -155,7 +155,7 @@ public class Navegador implements ObservadoIF
 				
 			//Inicializando o iterador temporal
 			Timer timer = new Timer();
-			/*TEST PRINT*/System.out.print("------Início da iteração com Timer no Navegador------\n");
+//			/*TEST PRINT*/System.out.print("------Início da iteração com Timer no Navegador------\n");
 			timer.schedule(new TimerTask(){
 
 				int i = 0;
@@ -171,7 +171,7 @@ public class Navegador implements ObservadoIF
 						setVel("50.0");
 						i++;
 						getNavegador().atualizaObservadores(getNavegador());
-						/*TEST PRINT*/System.out.print("Instante = "+i+" ---> "+getLat()+"; "+getLon()+"; "+getVel()+"\n");
+//						/*TEST PRINT*/System.out.print("Instante = "+i+" ---> "+getLat()+"; "+getLon()+"; "+getVel()+"\n");
 					}
 					else i = 0;
 				}

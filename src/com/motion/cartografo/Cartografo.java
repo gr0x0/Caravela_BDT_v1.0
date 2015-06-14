@@ -61,13 +61,17 @@
 ////////////////////////////////////////////////////////////////////////////
 
 package com.motion.cartografo;
-import java.io.IOException;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 ///*INTERFACE CODE*/import java.util.Iterator;
 import java.util.ListIterator;
+
 import com.motion.navegador.Navegador;
-import com.motion.supportClasses.ArchiveManager;
+
+import org.jdom2.Element;
+
+import com.motion.supportClasses.XMLParser;
 import com.motion.supportClasses.ObservadorIF;
 import com.motion.supportClasses.ObservadoIF;
 
@@ -78,6 +82,8 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 	protected 	static MarList listaMares = new MarList();
 	private 	static Mar marAtual = null;	
 	private 	ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();
+	
+	final String xmlZonesPath = "resources\\zonas.xml";
 
 	private double 	latMinima = 1000, lonMinima = 1000, latMaxima = -1000, lonMaxima = -1000;
 
@@ -88,50 +94,40 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 		// Atualmente e com intenção de teste, tais dados estão sendo pegos de um arquivo texto chamado
 		// "Zones_Data_Test.txt", contido no diretório 'resources'.
 
-		try
-		{	
-			//Abrindo arquivo texto de Mares
-			ArchiveManager archiveManager = new ArchiveManager("resources\\Zones_Data_Test.txt");
-			ArrayList<String> data = archiveManager.openArchive();
+		//Abrindo arquivo texto de Mares
+		XMLParser parser = new XMLParser(xmlZonesPath);
+		List<org.jdom2.Element> elementsList = parser.openArchive();
 
-//			/*TEST PRINT*/System.out.print("------Início da leitura de zonas e alocação de Mares------\n");
+			/*TEST PRINT*/System.out.print("------Início da leitura de zonas e alocação de Mares------\n");
 
-			//Instanciando todos os Mares contidos no arquivo texto
-			for(int i = 0; i < data.size(); i++)
+		//Instanciando todos os Mares contidos no arquivo xml
+		for (org.jdom2.Element zoneElement : elementsList) {
+			String id = zoneElement.getAttributeValue("id");
+			double lat0 = Double.parseDouble(zoneElement.getChildText("lat0"));
+			double latF = Double.parseDouble(zoneElement.getChildText("latF"));
+			double lon0 = Double.parseDouble(zoneElement.getChildText("lon0"));
+			double lonF = Double.parseDouble(zoneElement.getChildText("lonF"));
+
+			List<Element> impressoesElements = zoneElement.getChild("impressoes").getChildren();
+			ArrayList<String> listaImpressoes = new ArrayList<String>();
+			for(int i = 0; impressoesElements.get(i)!=null; i++)
 			{
-				String stringData[] = data.get(i).trim().toString().split(",");
+				listaImpressoes.add(impressoesElements.get(i).getText());
+				/*TEST PRINT*/System.out.print("Variaveis "+i+" = "+"id "+id+"| lon0 "+lon0+"| lonF "+lonF+"| lat0 "+lat0+"| latF "+latF+"\n");
+			}
 
-//				/*TEST PRINT*/System.out.print("Data      "+i+" = "+data.get(i)+"\n");
+			Mar novoMar = new Mar(id, lat0, latF, lon0, lonF, listaImpressoes);
+			Cartografo.listaMares.add(novoMar);
 
-				String id = stringData[0];
-				double lat0 = Double.parseDouble(stringData[1]);
-				double latF = Double.parseDouble(stringData[2]);
-				double lon0 = Double.parseDouble(stringData[3]);
-				double lonF = Double.parseDouble(stringData[4]);
-				String stringImpressoes[] = stringData[5].split(";");
-				ArrayList<String> listaImpressoes = new ArrayList<String>(Arrays.asList(stringImpressoes));;
-
-//				/*TEST PRINT*/System.out.print("Variaveis "+i+" = "+"id "+id+"| lon0 "+lon0+"| lonF "+lonF+"| lat0 "+lat0+"| latF "+latF+"\n");
-
-				Mar novoMar = new Mar(id, lat0, latF, lon0, lonF, listaImpressoes);
-				Cartografo.listaMares.add(novoMar);
-
-				//Guardando as lat e lon mínimas e máximas
-				if(this.latMinima>lat0)
-					latMinima = lat0;
-				if(this.lonMinima>lon0)
-					lonMinima = lon0;
-				if(this.latMaxima<latF)
-					latMaxima = latF;
-				if(this.lonMaxima<lonF)
-					lonMaxima = lonF;
-			}			
-
-//			/*TEST PRINT*/System.out.print("------Fim da leitura de zonas e alocação de Mares------\n");
-		}
-
-		catch (IOException e){
-			System.out.printf(e.getMessage());
+			//Guardando as lat e lon mínimas e máximas
+			if(this.latMinima>lat0)
+				latMinima = lat0;
+			if(this.lonMinima>lon0)
+				lonMinima = lon0;
+			if(this.latMaxima<latF)
+				latMaxima = latF;
+			if(this.lonMaxima<lonF)
+				lonMaxima = lonF;
 		}
 
 		//Inscrevendo-se como observador junto ao módulo Navegador

@@ -1,8 +1,8 @@
-package com.motion.supportClasses;
+package com.motion.supportClasses; 	
 
-import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ArchiveManager 
@@ -14,8 +14,7 @@ public class ArchiveManager
 		path = archivesPath;
 	}
 	
-	public ArrayList<String> openArchive() throws IOException
-	{
+	public ArrayList<String> openArchive() throws IOException{
 		FileReader charReader = new FileReader(path);
 		BufferedReader textReader = new BufferedReader(charReader);
 	
