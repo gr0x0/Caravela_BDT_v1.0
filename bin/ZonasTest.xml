@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:zonas 
+			xmlns:tns="http://www.example.org/ZonasSchema"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.example.org/ZonasSchema ZonasSchema.xsd ">
+			
+	<tns:zona tns:id="GAVEA03">
+		<tns:lat0>-22.931859</tns:lat0>
+		<tns:latF>-22.846682</tns:latF>
+		<tns:lon0>-43.496107</tns:lon0>
+		<tns:lonF>-43.393895</tns:lonF>
+		<tns:impressoes>
+			<tns:impressao>CocaCola_13_02_16</tns:impressao>
+			<tns:impressao>Pepsi_15_01_16</tns:impressao>
+			<tns:impressao>Sprite_10_12_15</tns:impressao>
+			<tns:impressao>FantaLaranja_01_01_16</tns:impressao>
+		</tns:impressoes>
+	</tns:zona>
+	
+	<tns:zona tns:id="GAVEA04">
+		<tns:lat0>-23.000000</tns:lat0>
+		<tns:latF>-22.931859</tns:latF>
+		<tns:lon0>-43.496107</tns:lon0>
+		<tns:lonF>-43.393895</tns:lonF>
+		<tns:impressoes>
+			<tns:impressao>Flamengo_22_11_15</tns:impressao>
+			<tns:impressao>Fluminense_10_01_15</tns:impressao>
+			<tns:impressao>Botafogo_17_01_16</tns:impressao>
+			<tns:impressao>Vasco_25_12_15</tns:impressao>
+		</tns:impressoes>
+	</tns:zona>
+	
+	<tns:zona tns:id="LEBLON01">
+		<tns:lat0>-23.914823</tns:lat0>
+		<tns:latF>-22.863717</tns:latF>
+		<tns:lon0>-43.393895</tns:lon0>
+		<tns:lonF>-43.257612</tns:lonF>
+		<tns:impressoes>
+			<tns:impressao>CasaDaEmpada_02_12_15</tns:impressao>
+			<tns:impressao>Xerox_27_11_15</tns:impressao>
+			<tns:impressao>Morning_14_12_15</tns:impressao>
+			<tns:impressao>LABGRAD_03_01_16</tns:impressao>
+			<tns:impressao>Carga_Nobre_22_12_15</tns:impressao>
+			<tns:impressao>Pilotis_12_01_16</tns:impressao>
+			<tns:impressao>Bosque_01_01_16</tns:impressao>
+			<tns:impressao>Leme_10_01_16</tns:impressao>
+			<tns:impressao>Fastway_09_01_16</tns:impressao>
+		</tns:impressoes>
+	</tns:zona>
+
+</tns:zonas>
