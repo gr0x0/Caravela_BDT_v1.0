@@ -66,22 +66,14 @@ public class Bombardeiro implements ObservadorIF {
 
 		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protï¿½tipo
 
-//		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
-//				Cartografo.getCartografo().getMaresCoordMatrix());
-
-
-		//Utilizando o InterfaceManager para gerar uma interface de amostragem de protï¿½tipo
-
-
-//		pInterfaceManager = InterfaceManager.getInterfaceManager(null,null,
-//				Cartografo.getCartografo().getMaresCoordMatrix());
-
-
 //		/*INTERFACE CODE*/pInterfaceManager = InterfaceManager.getInterfaceManager(
 //				Cartografo.getCartografo().getMaresCoordinates());
 		
 		// aqui entra a rotina de inicializaï¿½ï¿½o da tela e da reproduï¿½ï¿½o contï¿½nua das impressï¿½es
-		// ...
+		// lembrando que: as impressões estão limitadas a 12 por zona, cada uma de 10 segundos, para um
+		// loop total de 2 minutos. Dessas 12 impressões, 2 serão default: a impressão da Motion e a 
+		// impressão do governo - e por isso no .xsd a quantidade mínima de impressões é 2 (e a máxima
+		// é 12)
 		
 		//Inscrevendo-se como observador junto aos mï¿½dulos Navegador e Cartï¿½grafo
 		Navegador.getNavegador().add(this);

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<car:schema
+	targetNamespace="http://www.motionmedia.com/CarrosSchema"
+	 xmlns:car="http://www.w3.org/2001/XMLSchema" 
+	 xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<car:element name="root">
+		<car:complexType>	
+		<car:sequence><car:element name="root">
+		<car:complexType>	
+		<car:sequence>
+			<car:element name="linhaCarro">
+				<car:complexType>
+				<car:sequence>
+					<car:element name="zona" maxOccurs="unbounded" minOccurs="1">
+						<car:complexType>
+						<car:sequence>
+							<car:element name="lat0" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="latF" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="lon0" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="lonF" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="listaImpressoes" maxOccurs="1" minOccurs="1">
+								<car:complexType>
+								<car:sequence>
+									<car:element name="impressao"  type="car:string" maxOccurs="12" minOccurs="2"></car:element>
+								</car:sequence>
+								</car:complexType>
+							</car:element>
+						</car:sequence>
+						<car:attribute name="idZona" type="car:string" use="required"></car:attribute>
+						</car:complexType>
+					</car:element>
+				</car:sequence>
+				<car:attribute name="idLinha" type="car:string" use="required"></car:attribute>
+				</car:complexType>
+			</car:element>			
+		</car:sequence>
+		<car:attribute name="idCarro" type="car:string" use="required"></car:attribute>
+		<car:attribute name="chassiCarro" type="car:string" use="required"></car:attribute>
+		</car:complexType>
+	</car:element>
+			<car:element name="linhaCarro">
+				<car:complexType>
+				<car:sequence>
+					<car:element name="zona" maxOccurs="unbounded" minOccurs="1">
+						<car:complexType>
+						<car:sequence>
+							<car:element name="lat0" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="latF" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="lon0" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="lonF" type="car:double" maxOccurs="1" minOccurs="1"></car:element>
+							<car:element name="listaImpressoes" maxOccurs="1" minOccurs="1">
+								<car:complexType>
+								<car:sequence>
+									<car:element name="impressao"  type="car:string" maxOccurs="12" minOccurs="2"></car:element>
+								</car:sequence>
+								</car:complexType>
+							</car:element>
+						</car:sequence>
+						<car:attribute name="idZona" type="car:string" use="required"></car:attribute>
+						</car:complexType>
+					</car:element>
+				</car:sequence>
+				<car:attribute name="idLinha" type="car:string" use="required"></car:attribute>
+				</car:complexType>
+			</car:element>			
+		</car:sequence>
+		<car:attribute name="idCarro" type="car:string" use="required"></car:attribute>
+		<car:attribute name="chassiCarro" type="car:string" use="required"></car:attribute>
+		</car:complexType>
+	</car:element>
+	
+	
+</car:schema>
