@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carroInfo chassiCarro="9BWCA11J0Y4000001" idCarro="CIFERAL_0012"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="CarroSchema.xsd">
+	<linhaCarro idLinha="456">
+		<zona idZona="GAVEA03">
+			<lat0>-22.931859</lat0>
+			<latF>-22.846682</latF>
+			<lon0>-43.496107</lon0>
+			<lonF>-43.393895</lonF>
+			<listaImpressoes>
+				<impressao>CocaCola_13_02_16</impressao>
+				<impressao>Pepsi_15_01_16</impressao>
+				<impressao>Sprite_10_12_15</impressao>
+				<impressao>FantaLaranja_01_01_16</impressao>
+			</listaImpressoes>
+		</zona>
+		<zona idZona="GAVEA04">
+			<lat0>-23.000000</lat0>
+			<latF>-22.931859</latF>
+			<lon0>-43.496107</lon0>
+			<lonF>-43.393895</lonF>
+			<listaImpressoes>
+				<impressao>Flamengo_22_11_15</impressao>
+				<impressao>Fluminense_10_01_15</impressao>
+				<impressao>Botafogo_17_01_16</impressao>
+				<impressao>Vasco_25_12_15</impressao>
+			</listaImpressoes>
+		</zona>
+		<zona idZona="LEBLON01">
+			<lat0>-23.914823</lat0>
+			<latF>-22.863717</latF>
+			<lon0>-43.393895</lon0>
+			<lonF>-43.257612</lonF>
+			<listaImpressoes>
+				<impressao>CasaDaEmpada_02_12_15</impressao>
+				<impressao>Xerox_27_11_15</impressao>
+				<impressao>Morning_14_12_15</impressao>
+				<impressao>LABGRAD_03_01_16</impressao>
+				<impressao>Carga_Nobre_22_12_15</impressao>
+				<impressao>Pilotis_12_01_16</impressao>
+				<impressao>Bosque_01_01_16</impressao>
+				<impressao>Leme_10_01_16</impressao>
+				<impressao>Fastway_09_01_16</impressao>
+			</listaImpressoes>
+		</zona>
+	</linhaCarro>
+</carroInfo>

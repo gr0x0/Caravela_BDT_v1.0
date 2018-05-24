@@ -85,7 +85,7 @@ public class Cartografo implements ObservadorIF, ObservadoIF {
 	private 	static Mar marAtual = null;	
 	private 	ArrayList<ObservadorIF> listaObservadores = new ArrayList<ObservadorIF>();
 
-	final String xmlZonesPath 		= "resources\\ZonasTeste.xml";
+	final String xmlZonesPath 		= "resources\\CarroInfoTeste.xml";
 	final String schemaZonesPath	= "resources\\CarroSchema.xsd";
 
 	private double 	latMinima = 1000, lonMinima = 1000, latMaxima = -1000, lonMaxima = -1000;

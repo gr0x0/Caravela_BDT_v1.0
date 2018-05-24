@@ -58,11 +58,11 @@ import com.motion.navegador.*;
 public class Capitao {
 	
 //----------VARIÁVEIS----------//
-	Cartografo 		pCartografo	 = null;
-	//Comissario 	pComissario	 = null;
-	//Escrivao 		pEscrivao	 = null;
-	Navegador 		pNavegador	 = null;
-	Bombardeiro 	pBombardeiro = null;
+	private Cartografo 		pCartografo	 = null;
+	//private Comissario 	pComissario	 = null;
+	//private Escrivao 		pEscrivao	 = null;
+	private Navegador 		pNavegador	 = null;
+	private Bombardeiro 	pBombardeiro = null;
 	
 //----------CONSTRUTOR----------//
 	private Capitao(){		
